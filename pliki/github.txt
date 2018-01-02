@@ -1,0 +1,12 @@
+git clone - klonuje repo do folderu
+git add . - dodaje rzeczy do poczekalni/przechowalni gita
+git rm  -—cached -r . - usuwa wszystko z poczekalni
+git commit -m „ komentarz”. - zapisuje pliki ktore mamy w poczekalni
+git log - wyswietla wszystkie commity
+git push - przesyla wszystkie zmiany na komputerze do repozytorium zdalnego gita
+
+
+
+
+
+Curl -o nazwa-pliku adres url
