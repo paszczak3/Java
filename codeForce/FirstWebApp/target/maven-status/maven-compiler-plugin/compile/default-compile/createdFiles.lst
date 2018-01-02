@@ -1,0 +1,15 @@
+pl/javastart/beans/FileMessageProducer.class
+pl/javastart/beans/MessageDecorator.class
+pl/javastart/beans/ProdProfile.class
+pl/javastart/beans/UpperCaseMessageDecorator.class
+pl/javastart/app/SpringDiApplication.class
+pl/javastart/beans/DevProfile.class
+pl/javastart/beans/MessagePrinter.class
+pl/javastart/beans/MessageProducer.class
+pl/javastart/config/AppConfig.class
+pl/javastart/config/AppConfig$1.class
+pl/javastart/beans/SimpleMessageProducer.class
+pl/javastart/beans/Producer$ProducerType.class
+pl/javastart/beans/Producer.class
+pl/javastart/beans/DatabaseDatasource.class
+pl/javastart/beans/NamesRepository.class

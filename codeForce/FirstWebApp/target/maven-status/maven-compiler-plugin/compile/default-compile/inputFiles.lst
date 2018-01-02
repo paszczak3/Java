@@ -1,0 +1,13 @@
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/MessageProducer.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/MessageDecorator.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/FileMessageProducer.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/app/SpringDiApplication.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/ProdProfile.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/Producer.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/UpperCaseMessageDecorator.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/MessagePrinter.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/DevProfile.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/DatabaseDatasource.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/NamesRepository.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/config/AppConfig.java
+/Users/paszczak/Desktop/codeForce/FirstWebApp/src/main/java/pl/javastart/beans/SimpleMessageProducer.java
