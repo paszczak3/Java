@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Moje MVC Spring</title>
+</head>
+<body>
+<h1 th:text="${text}"></h1>
+
+    <form method="post" th:action="@{/}">
+        <input type="text" th:field ="${value.x}" />
+        <input type="text" th:field ="${value.y}" />
+        <input type="submit" value="Add" name="add"/>
+        <input type="submit" value="Sub" name="sub"/>
+        <input type="submit" value="Mul" name="mul"/>
+        <input type="submit" value="Div" name="div"/>
+    </form>
+
+
+
+</body>
+</html>
