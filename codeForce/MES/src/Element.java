@@ -25,6 +25,7 @@ public class Element {
         return ID;
     }
 
+
     public double getS() {
         return S;
     }
@@ -32,6 +33,7 @@ public class Element {
     public double getK() {
         return K;
     }
+
 
     public double[][] getLH() {
         return LH;
@@ -45,6 +47,7 @@ public class Element {
         this.ID = ID;
     }
 
+
     public void setS(double s) {
         S = s;
     }
@@ -52,6 +55,7 @@ public class Element {
     public void setK(double k) {
         K = k;
     }
+
 
     public void setLH(double[][] LH) {
         this.LH = LH;

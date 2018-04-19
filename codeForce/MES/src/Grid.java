@@ -1,10 +1,7 @@
 public class Grid {
     Node[] n  = new Node[GlobalClass.nh];
     Element[] e = new Element[ (GlobalClass.nh - 1)];
-   // private double ne = GlobalClass.L/(GlobalClass.nh-1);
     private double temp = 0;
-
-
 
     public Grid() {
         double dx = 0;
@@ -23,7 +20,6 @@ public class Grid {
         }
     }
 
-
     public void putIn(){
         for(int i = 0; i<GlobalClass.nh -1; i++){
             e[i] = new Element();
@@ -33,30 +29,35 @@ public class Grid {
             e[i].ID[0] = i;
             e[i].ID[1] = i + 1;
 
-            System.out.println(e[i].ID[0]);
+        //    System.out.println(e[i].ID[0]);
 
-            System.out.println(e[i].ID[1]);
-
+          //  System.out.println(e[i].ID[1]);
 
             this.temp = e[i].getS() * e[i].getK() / (this.n[ e[i].ID[1]].x - n[e[i].ID[0]].x);
-            e[i].LH[0][0] =  this.temp;
+            //this.temp = e[i].getS() * e[i].getK() / (GlobalClass.L/2);
+           // System.out.println("temp " + temp );
+
+            //temp2 = GlobalClass.S * GlobalClass.K / (GlobalClass.L/2);
+            //System.out.println("temp " + temp2 );
+
+            e[i].LH[0][0] = this.temp;
             e[i].LH[0][1] = -this.temp;
             e[i].LH[1][0] = -this.temp;
-            e[i].LH[1][1] =  this.temp;
+            e[i].LH[1][1] = this.temp;
 
             if(n[e[i].ID[0]].getStatus() == 2) {
                 e[i].LH[0][0] += GlobalClass.alfa * e[i].getS();
             }
             if(n[e[i].ID[1]].getStatus() == 2) {
                 e[i].LH[1][1] += GlobalClass.alfa * e[i].getS();
+               // System.out.println(e[i].LH[1][1]);
             }
 
         }
 
-
         for(int i = 0; i<GlobalClass.nh-1; i++) {
             if(n[e[i].ID[0]].getStatus() == 1) {
-                e[i].LP[0] += -GlobalClass.q * e[i].getS();
+                e[i].LP[0] += (-GlobalClass.q * e[i].getS());
             }
             if(n[e[i].ID[1]].getStatus() == 1) {
                 e[i].LP[1] += -GlobalClass.q * e[i].getS();
@@ -82,7 +83,4 @@ public class Grid {
             soe.GP[e[i].ID[1]] += e[i].LP[1];
         }
     }
-
-
-
 }

@@ -1,16 +1,19 @@
 public class Main {
     public static void main(String[] args) {
         GlobalClass globalClass = new GlobalClass();
+        //globalClass.typeValues();
+        globalClass.L = 10; globalClass.nh = 3; globalClass.K = 58;
+        globalClass.S = 4; globalClass.alfa = 7; globalClass.q = -735;
+        globalClass.tAlfa = 400;
         Grid grid = new Grid();
         grid.putIn();
         SOE soe = new SOE();
         grid.putInToSoe(soe);
-        soe.GT = lsolve(soe.GH,soe.GP);
-
-
-        System.out.print(soe.toString());
-        System.out.println("");
         soe.printGH();
+        soe.printGP();
+        soe.GT = lsolve(soe.GH,soe.GP);
+        System.out.print(soe.toString());
+
     }
 
 
@@ -26,7 +29,7 @@ public class Main {
                 }
             }
             Double[] temp = A[p]; A[p] = A[max]; A[max] = temp;
-            double   t    = b[p]; b[p] = b[max]; b[max] = t;
+            double   t = b[p]; b[p] = b[max]; b[max] = t;
 
 
             if (Math.abs(A[p][p]) <= EPSILON) {

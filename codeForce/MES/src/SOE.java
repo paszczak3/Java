@@ -44,11 +44,14 @@ public class SOE {
         this.GT = GT;
     }
 
+    public Double getGT2() {
+        return GT[2];
+    }
+
     @Override
     public String toString() {
-        return "SOE bez GH{" +
-                ", GP=" + Arrays.toString(GP) +
-                ", GT=" + Arrays.toString(GT) +
+        return "GT {" +
+                " GT=" + Arrays.toString(GT) +
                 '}';
     }
 
@@ -56,9 +59,16 @@ public class SOE {
         for(int i = 0; i<GH.length; i++){
             for(int j = 0; j< GH.length; j++){
                 sb.append("GH [" + i + "] [" + j + "] " + GH[i][j] );
-                sb.append(" ");
+                sb.append(", ");
             }
         }
         System.out.println(sb.toString());
+    }
+
+    public void printGP(){
+        for (Double d: GP) {
+            System.out.print("GP [" + d +"] ");
+        }
+        System.out.println(" ");
     }
 }
