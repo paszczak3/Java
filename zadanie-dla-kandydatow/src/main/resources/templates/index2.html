@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <a class="aaa" id="newItemA">Dodaj uzytkownika</a>
+    <a class="aaa" id="showDeleteForm">Usun uzytkownika</a>
+    <a class="aaa" id="showEditForm">Edytuj uzytkownika</a>
+    <a class="aaa" id="showUserGroup">Dodaj grupe</a>
+    <a class="aaa" id="showAddUserToGroup">Dodaj uzytkownikow do grupy</a>
+    <a class="aaa" id="showDeleteGroup">Usun grupe</a>
+    <a class="aaa" id="showDeleteUserFromGroup">Usun uzytkownika z grupy</a>
+    <a class="aaa" th:href="@{/listUsers}">Lista uzytkownikow</a>
+    <a class="aaa" th:href="@{/groupsUser}">Lista grup</a>
+
+    <p th:text="${text}"></p>
+
+    <form id="newUserForm" method="post" th:action="@{/addUser}">
+        <p>nick i haslo powinny skladac sie co najmniej z 5 znakow</p>
+        <input type="text"  placeholder="podaj nazwe" th:field="${user.nick}">
+        <input type="password"  placeholder="podaj haslo" th:field="${user.password}">
+        <input type="text"  placeholder="podaj imie" th:field="${user.firstName}">
+        <input type="text"  placeholder="podaj nazwisko" th:field="${user.lastName}">
+        <input type="date" placeholder="data dd/MM/yyyy" th:field="${user.date}">
+        <input type="submit" value="Dodaj">
+    </form>
+
+    <form id="deleteForm" method="post" th:action="@{/deleteUser}">
+        <input type="text"  placeholder="podaj nick" name="nick">
+        <input type="submit" value="Usun">
+    </form>
+
+    <form id="editUserForm" method="post" th:action="@{/editUser}">
+        <input type="text"  placeholder="nazwa edytowanego uzytkownika" th:field="${user.nick}">
+        <input type="text"  placeholder="podaj nowa nazwe" name="newNick">
+        <input type="password"  placeholder="podaj haslo" th:field="${user.password}">
+        <input type="text"  placeholder="podaj imie" th:field="${user.firstName}">
+        <input type="text"  placeholder="podaj nazwisko" th:field="${user.lastName}">
+        <input type="date" placeholder="data dd/MM/yyyy" th:field="${user.date}">
+        <input type="submit" value="Edytuj">
+    </form>
+
+    <form method="post" id="userGroup" th:action="@{/addGroup}">
+        <input type="text" placeholder="nazwa grupy" name="name">
+        <input type="submit" value="Dodaj Grupe">
+    </form>
+
+    <form method="post" id="addUserToGroup" th:action="@{/addUserToGroup}">
+        <input type="text" placeholder="nazwa grupy" name="name">
+        <input type="text" placeholder="nazwa uzytkownika" name="nick">
+        <input type="submit" value="Dodaj Uzytkownia">
+    </form>
+
+    <form method="post" id="deleteGroup" th:action="@{/deleteGroup}">
+        <input type="text" placeholder="nazwa grupy" name="name">
+        <input type="submit" value="Usun Grupe">
+    </form>
+
+    <form method="post" id="deleteUserFromGroup" th:action="@{/deleteUserFromGroup}">
+        <input type="text" placeholder="nick" name="nick">
+        <input type="submit" value="Usun z grupy">
+    </form>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js.js"></script>
+</body>
+</html>

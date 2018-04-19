@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Uzytkownikow</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div th:if="not ${allGroups.isEmpty()}">
+    <h1>Uzytkownicy :</h1>
+    <table border="1">
+        <tr>
+            <th>Nazwa grupy</th>
+            <th>Uzytkwonicy</th>
+        </tr>
+        <tr th:each="singleTime: ${allGroups}" th:object="${singleTime}">
+            <td th:text="*{name}"></td>
+            <td th:each="list: ${singleTime.users}" th:text="${list.nick}"></td>
+        </tr>
+    </table>
+</div>
+<div th:if="${allGroups.isEmpty()}">
+    <h1>Nie ma grup</h1>
+</div>
+
+</body>
+</html>
