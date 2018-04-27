@@ -1,76 +1,52 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 
 public class Main {
     public static void main(String[] args) {
-        int n,k,m, temp;
-        String words;
-        int tabCost[] = new int[5];
-        List<Integer> specialWords = new ArrayList<>();
-
-        String wantsToSay;
-
         Scanner sc = new Scanner(System.in);
+        Map<String , Integer> gr = new HashMap<>();
+        int n,k,m;
+        String tab[] = new String[100005];
+        int cost[] = new int[100005];
+        int gcost[] = new int[cost.length];
+
         n = sc.nextInt(); k =sc.nextInt(); m = sc.nextInt();
         sc.nextLine();
 
-        words = sc.nextLine();
-
-
-
+        for(int i = 0;  i<n ; i++) {
+            tab[i] = sc.next();
+        }
+        sc.nextLine();
+        for(int i = 0;  i<n ; i++) {
+            cost[i] = sc.nextInt();
+        }
         sc.nextLine();
 
-        for(int i = 0; i < k; i++) {
-            temp = sc.nextInt();
-            if(temp > 1) {
-                specialWords.add(temp);
-                for(int j = 0; j<temp; j++) {
-                    specialWords.add(sc.nextInt());
-                }
-            } else {
-                sc.nextInt();
+        for(int i = 0; i<k; i++) {
+            gcost[i] = Integer.MAX_VALUE;
+            int x;
+            x = sc.nextInt();
+            while(x > 0) {
+                x--;
+                int z;
+                z = sc.nextInt(); z--;
+                gcost[i] = Math.min(gcost[i], cost[z]);
+                gr.put(tab[z], i);
+
             }
-            temp = 0;
+            sc.nextLine();
+        }
+        long temp = 0;
+
+        for(int i = 0; i<m;i++){
+            String x;
+            x = sc.next();
+            temp += gcost[gr.get(x)];
         }
 
-        sc.nextLine();
-        wantsToSay = sc.nextLine();
+        System.out.println(temp);
 
-
-        System.out.println(Arrays.toString(specialWords.toArray()));
-
-        sc.close();
     }
 }
 
 
-class MyList{
-    private int value;
-    private String word;
-
-    public MyList() {
-    }
-
-    public MyList(int value, String word) {
-        this.value = value;
-        this.word = word;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public String getWord() {
-        return word;
-    }
-
-    public void setWord(String word) {
-        this.word = word;
-    }
-}
