@@ -23,7 +23,7 @@ public class ObrazThread extends Thread {
         }
         obraz.setHistogram(counter,(int)(mark)-33);
 
-        String s = "abc" + ((int)(mark)-33)+ " " + mark + " ";
+        String s = this.getName() + " - " + ((int)(mark)-33)+ " - " + mark + " - " + counter +"\n";
 
         for(int i = 0; i<counter; i++){
             sb.append(s);

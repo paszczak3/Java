@@ -5,7 +5,8 @@ git commit -m „ komentarz”. - zapisuje pliki ktore mamy w poczekalni
 git log - wyswietla wszystkie commity
 git push - przesyla wszystkie zmiany na komputerze do repozytorium zdalnego gita
 
-
+git config --global user.name "nick"
+git config --global user.email "email"
 
 
 

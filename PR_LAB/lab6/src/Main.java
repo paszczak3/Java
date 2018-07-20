@@ -14,7 +14,7 @@ public class Main {
         int m = scanner.nextInt();
         Obraz obraz_1 = new Obraz(n, m);
 
-      //  obraz_1.calculate_histogram();
+        obraz_1.calculate_histogram();
         //obraz_1.print_histogram();
 
         /*

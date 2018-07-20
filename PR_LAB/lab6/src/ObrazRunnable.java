@@ -32,7 +32,7 @@ public class ObrazRunnable implements Runnable {
             for(int i = 0; i<counter; i++) {
                  sb.append(Thread.currentThread().getName());
                  sb.append(((int) (mark) -33) + " " + (char)(int)(mark)+i + " ");
-                 for(int k = 0; k< obraz.getHistogram()[(int) (mark+i) -33]; k++) {
+                 for(int k = 0; k< obraz.getHistogram()[(mark+i) -33]; k++) {
                      sb.append("=");
                 }
             }
@@ -44,7 +44,7 @@ public class ObrazRunnable implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
-                System.out.print(sb.toString());
+                System.out.print(sb.toString() + "\n");
             }
         }
     }

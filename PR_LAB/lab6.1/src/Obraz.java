@@ -23,11 +23,8 @@ class Obraz {
         for(int i=0;i<n;i++) {
             for(int j=0;j<m;j++) {
                 tab[i][j] = (char)(random.nextInt(94)+33);  // ascii 33-127
-                System.out.print(tab[i][j]+" ");
             }
-            System.out.print("\n");
         }
-        System.out.print("\n\n");
 
         histogram = new int[94];
         clear_histogram();
@@ -64,10 +61,15 @@ class Obraz {
     }
 
     public void print_histogram(){
-
-        for(int i=0;i<94;i++) {
-            System.out.println(Thread.currentThread().getName()+": "+(char)(i+33)+" "+histogram[i]);
+        for(int i = 0; i < this.size_n; i++)
+        {
+        for(int j=0;j<this.size_m;j++) {
+            System.out.print(tab[i][j]+" ");
         }
+        System.out.print("\n");
+    }
+        System.out.print("\n\n");
+
 
     }
 
